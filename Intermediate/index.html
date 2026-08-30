@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <h1>Service Request Form</h1>
+
+            <form id="requestForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="requestType">Request Type</label>
+                <select id="requestType" required>
+                    <option value="">Select Request Type</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Information Request">Information Request</option>
+                    <option value="Account Issue">Account Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Request Description</label>
+                <textarea id="description" placeholder="Describe your request..." required></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+
+            <p id="message"></p>
+        </div>
+
+        <div class="card requests-card">
+            <h2>Submitted Requests</h2>
+            <button id="loadRequests" type="button">View Requests</button>
+            <div id="requestsList">
+                <p>Click "View Requests" to load submitted requests.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
